@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using Finisar.SQLite;
+using System.Data.SQLite;
 namespace biblioteka
 {
     /// <summary>
@@ -21,6 +21,7 @@ namespace biblioteka
     /// </summary>
     public partial class MainWindow : Window
     {
+        string dbConnectionString = @"Data Source=Ksiazki.db;Version=3;";
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +29,38 @@ namespace biblioteka
 
         private void btn_1_Click(object sender, RoutedEventArgs e)
         {
-          
+
+            SQLiteConnection sqliteCon = new SQLiteConnection(dbConnectionString);
+            //Otwarcie połączenia z bazą
+            try {
+                sqliteCon.Open();
+                string Query = "select * from Users where Username='" + this.txt_username.Text + "' and Password ='" + this.txt_password.Text + "' ";
+                SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
+
+                createCommand.ExecuteNonQuery();
+                SQLiteDataReader dr = createCommand.ExecuteReader();
+
+                int count = 0;
+                while (dr.Read())
+                {
+                    count++;
+                }
+
+                if (count == 1)
+                {
+                    MessageBox.Show("Wpisano poprawne dane logowania. Witaj!");
+                }
+                
+                if (count < 1)
+                {
+                    MessageBox.Show("Wpisano błędny login bądź hasło. Spróbuj ponownie!");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
