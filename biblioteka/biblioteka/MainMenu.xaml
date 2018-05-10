@@ -1,0 +1,13 @@
+﻿<Window x:Class="biblioteka.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:biblioteka"
+        mc:Ignorable="d"
+        Title="Menu główne" Height="299.148" Width="617.045" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="64,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Witaj w LibraApp."/><LineBreak/><Run Text="Wybierz interesującą Cię pozycję z menu."/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</Window>

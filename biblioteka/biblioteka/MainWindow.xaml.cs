@@ -34,7 +34,7 @@ namespace biblioteka
             //Otwarcie połączenia z bazą
             try {
                 sqliteCon.Open();
-                string Query = "select * from Users where Username='" + this.txt_username.Text + "' and Password ='" + this.txt_password.Text + "' ";
+                string Query = "select * from Users where Username='" + this.txt_username.Text + "' and Password ='" + this.txt_password.Password + "' ";
                 SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
 
                 createCommand.ExecuteNonQuery();
@@ -49,6 +49,11 @@ namespace biblioteka
                 if (count == 1)
                 {
                     MessageBox.Show("Wpisano poprawne dane logowania. Witaj!");
+                    MainMenu objFrmMain = new MainMenu();
+                    this.Hide();
+                    objFrmMain.Show();
+
+
                 }
                 
                 if (count < 1)
@@ -62,5 +67,11 @@ namespace biblioteka
             }
             
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
