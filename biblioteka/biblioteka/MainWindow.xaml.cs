@@ -21,7 +21,7 @@ namespace biblioteka
     /// </summary>
     public partial class MainWindow : Window
     {
-        string dbConnectionString = @"Data Source=Ksiazki.db;Version=3;";
+        string dbConnectionString = @"Data Source=..\..\Baza\Ksiazki.db;Version=3;";
         public MainWindow()
         {
             InitializeComponent();
