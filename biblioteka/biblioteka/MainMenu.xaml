@@ -1,13 +1,48 @@
 ﻿<Window x:Class="biblioteka.MainMenu"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:biblioteka"
-        mc:Ignorable="d"
-        Title="Menu główne" Height="299.148" Width="617.045" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="64,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Witaj w LibraApp."/><LineBreak/><Run Text="Wybierz interesującą Cię pozycję z menu."/><LineBreak/><Run/></TextBlock>
+        mc:Ignorable="d" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <StackPanel Background="WhiteSmoke">
+        <Grid Height="40" Background="Black">
+            <StackPanel HorizontalAlignment="Left" Margin="20 0">
+                <ComboBox FontSize="15" Width="50" Foreground="#FFA2A2A2" SelectedIndex="0" VerticalAlignment="Center" BorderBrush="#FFAEA9A9" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                    <ComboBoxItem Content="PL"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20 0">
+                <Button Content="FAQ" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Button Content="KONTAKT" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Button Content="STATUS ZAMÓWIENIA" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Button Content="MOJE KONTO" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
+                    <materialDesign:PackIcon Kind="Power" Foreground="#FFA2A2A2" Width="25" Height="25" />
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Height="100" Background="#FF818181">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 0">
+                <Button Uid="0" Width="150" Content="STRONA GŁÓWNA" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
+                <Button Uid="1" Width="150" Content="O NAS" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
+                <Button Uid="2" Width="150" Content="KSIĄŻKI" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
+                <Button Uid="3" Width="150" Content="WYPOŻYCZALNIA" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
+                <Button Uid="4" Width="150" Content="ZALEGŁOŚCI" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
+                <Button Uid="5" Width="150" Content="ODDZIAŁY" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
+                <Button Uid="6" Width="150" Content="DODAJ KSIĄŻKĘ" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
+            </StackPanel>
+            <Grid x:Name="GridCoursor" Width="150" Height="5" Background="Black" HorizontalAlignment="Left" Margin="10 0"/>
+        </Grid>
+        <Grid x:Name="GridMain" Height="460" Background="White"></Grid>
+    </StackPanel>
 
-    </Grid>
+
 </Window>
