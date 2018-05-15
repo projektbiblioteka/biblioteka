@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Finisar.SQLite;
 namespace biblioteka
 {
     /// <summary>
@@ -23,6 +24,11 @@ namespace biblioteka
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn_1_Click(object sender, RoutedEventArgs e)
+        {
+          
         }
     }
 }
