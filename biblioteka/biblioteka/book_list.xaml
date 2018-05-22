@@ -1,0 +1,15 @@
+﻿<Page x:Class="biblioteka.book_list"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:biblioteka"
+      mc:Ignorable="d" 
+      d:DesignHeight="474" d:DesignWidth="1080"
+      Title="book_list">
+
+    <Grid Background="AliceBlue">
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="33,60,0,0" VerticalAlignment="Top" Height="384" Width="1007"/>
+        <Button x:Name="load_table_txt" Content="Załaduj tabelę" HorizontalAlignment="Center" Margin="392,10,376,427" VerticalAlignment="Center" Width="312" Click="load_table_txt_Click" Background="#FFC7C7C7" Height="37"/>
+    </Grid>
+</Page>
