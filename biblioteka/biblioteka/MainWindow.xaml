@@ -12,13 +12,13 @@
             <ColumnDefinition Width="460*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btn_1" Content="Zaloguj się" HorizontalAlignment="Left" Height="33" Margin="87.796,234,0,0" VerticalAlignment="Top" Width="109" Click="btn_1_Click" Grid.Column="1"/>
+        <Button x:Name="btn_1" Content="Zaloguj się" HorizontalAlignment="Left" Height="33" Margin="87.796,234,0,0" VerticalAlignment="Top" Width="109" Click="btn_1_Click" Grid.Column="1" Background="#FF005DFF" BorderBrush="Black"/>
         <TextBox x:Name="txt_username" HorizontalAlignment="Left" Height="37" Margin="87.796,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="221" Background="AliceBlue" BorderBrush="Black" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
         <Label x:Name="Username" Content="Login:" HorizontalAlignment="Left" Margin="41,134,0,0" VerticalAlignment="Top" Grid.Column="1" Height="37" Background="White" Foreground="#DD000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  />
         <Label x:Name="Password" Content="Hasło:" HorizontalAlignment="Left" Margin="40,183,0,0" VerticalAlignment="Top" Grid.Column="1" Height="37" Background="White" Foreground="#DD000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <PasswordBox x:Name="txt_password" HorizontalAlignment="Left" Margin="87.796,183,0,0" VerticalAlignment="Top" Width="221" Height="37" Background="AliceBlue" BorderBrush="Black" OpacityMask="Black" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="76.796,76,0,0" Width="273" FontSize="15" Height="45" Grid.Column="1"><Run Text="               "/><Run Text="Witaj użytkowniku. "/><LineBreak/><Run Text="Zaloguj się przy użyciu swoich danych."/><LineBreak/><Run/></TextBlock>
-        <Button x:Name="btnExit" Content="Wyjście" HorizontalAlignment="Left" Margin="199.796,234,0,0" VerticalAlignment="Top" Width="109" Height="33" Grid.Column="1"/>
+        <Button x:Name="btnExit" Content="Wyjście" HorizontalAlignment="Left" Margin="199.796,234,0,0" VerticalAlignment="Top" Width="109" Height="33" Grid.Column="1" Background="#FF005DFF" BorderBrush="Black"/>
 
     </Grid>
 </Window>

@@ -28,9 +28,6 @@ namespace biblioteka
             int index = int.Parse(((Button)e.Source).Uid);
 
 
-            GridCoursor.Margin = new Thickness(10 + (150 * index), 45, 0, 10);
-
-            
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -41,7 +38,7 @@ namespace biblioteka
         private void BtnClickP1(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
-           GridCoursor.Margin = new Thickness(10 + (150 * index), 45, 0, 10);
+           
             Main.Content = new book_list();
 
         }
