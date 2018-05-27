@@ -57,5 +57,65 @@ namespace biblioteka
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void add_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SQLiteConnection sqliteCon = new SQLiteConnection(dbConnectionString);
+            //Otwarcie połączenia z bazą
+            try
+            {
+                sqliteCon.Open();
+                string Query = "insert into Ksiazki (IDKsiazki, Tytul, Autor, Rok_Wydania, Wydawnictwo, Filia) values('" + this.ksiazki_id_txtbx.Text + "', '" + this.tytul_txtbx.Text + "', '" + this.autor_txtbx.Text + "', '" + this.rok_wydania_txtbx.Text + "', '" + this.wydawnictwo_txtbx.Text + "', '" + this.fillia_txtbx.Text + "')";
+                SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Zapiano");
+                sqliteCon.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void delete_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SQLiteConnection sqliteCon = new SQLiteConnection(dbConnectionString);
+            //Otwarcie połączenia z bazą
+            try
+            {
+                sqliteCon.Open();
+                string Query = "delete from Ksiazki where IDKsiazki='" + this.ksiazki_id_txtbx.Text + "'";
+                SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Usunięto");
+                sqliteCon.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void update_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SQLiteConnection sqliteCon = new SQLiteConnection(dbConnectionString);
+            //Otwarcie połączenia z bazą
+            try
+            {
+                sqliteCon.Open();
+                string Query = "update Ksiazki set IDKsiazki='" + this.ksiazki_id_txtbx.Text + "', Tytul='" + this.tytul_txtbx.Text + "', Autor='" + this.autor_txtbx.Text + "', Rok_Wydania='" + this.rok_wydania_txtbx.Text + "', Wydawnictwo='" + this.wydawnictwo_txtbx.Text + "', Filia='" + this.fillia_txtbx.Text + "' where IDKsiazki='" + this.ksiazki_id_txtbx.Text + "' ";
+                SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Zaktualizowano");
+                sqliteCon.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

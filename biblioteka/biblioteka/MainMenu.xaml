@@ -11,31 +11,20 @@
             <StackPanel HorizontalAlignment="Left" Margin="20 0">
 
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20 0">
-                <Button Content="FAQ" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Click="BtnClickP1"/>
-                <Button Content="KONTAKT" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"/>
-                <Button Content="STATUS ZAMÓWIENIA" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"/>
-                <Button Content="MOJE KONTO" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"/>
-                <Button Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
-                    <materialDesign:PackIcon Kind="Power" Foreground="#FFA2A2A2" Width="25" Height="25" />
-                </Button>
-            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20 0"/>
         </Grid>
-        <Grid Height="60" Background="#FF818181">
+        <Grid Height="60" Background="#FF005DFF">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 0">
-                <Button Uid="0" Width="150" Content="STRONA GŁÓWNA" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
-                <Button Uid="1" Width="150" Content="O NAS" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
-                <Button Uid="2" Width="150" Content="KSIĄŻKI" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="BtnClickP1"/>
-                <Button Uid="3" Width="150" Content="WYPOŻYCZALNIA" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
-                <Button Uid="4" Width="150" Content="ZALEGŁOŚCI" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
-                <Button Uid="5" Width="150" Content="ODDZIAŁY" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
-                <Button Uid="6" Width="150" Content="DODAJ KSIĄŻKĘ" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Click="Button_Click"/>
+                <Button Uid="2" Width="265" Content="KSIĄŻKI" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="BtnClickP1"/>
+                <Button Uid="3" Width="265" Content="WYPOŻYCZALNIA" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click"/>
+                <Button Uid="4" Width="265" Content="ZALEGŁOŚCI" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click"/>
+                <Button Uid="5" Width="265" Content="ODDZIAŁY" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click"/>
             </StackPanel>
-            <Grid x:Name="GridCoursor" Width="150" Height="5" Background="Black" HorizontalAlignment="Left" Margin="10,45,0,10"/>
         </Grid>
         <Grid Height="474">
             <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
         </Grid>
+        <DataGrid x:Name="dataGrid"/>
     </StackPanel>
 
 
