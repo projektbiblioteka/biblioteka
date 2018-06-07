@@ -42,5 +42,14 @@ namespace biblioteka
             Main.Content = new book_list();
 
         }
+
+        private void BtnClickP2(object sender, RoutedEventArgs e)
+        {
+            int index = int.Parse(((Button)e.Source).Uid);
+
+            Main.Content = new order_list();
+
+        }
+
     }
 }
