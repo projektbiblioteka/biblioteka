@@ -59,5 +59,13 @@ namespace biblioteka
 
         }
 
+        private void BtnClickP4(object sender, RoutedEventArgs e)
+        {
+            int index = int.Parse(((Button)e.Source).Uid);
+
+            Main.Content = new contact();
+
+        }
+
     }
 }

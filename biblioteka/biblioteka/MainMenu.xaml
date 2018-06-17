@@ -18,7 +18,7 @@
                 <Button Uid="2" Width="265" Content="KSIĄŻKI" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="BtnClickP1"/>
                 <Button Uid="3" Width="265" Content="WYPOŻYCZALNIA" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="BtnClickP2"/>
                 <Button Uid="4" Width="265" Content="ZALEGŁOŚCI" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="BtnClickP3"/>
-                <Button Uid="5" Width="265" Content="ODDZIAŁY" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+                <Button Uid="5" Width="265" Content="ODDZIAŁY" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="BtnClickP4"/>
             </StackPanel>
         </Grid>
         <Grid Height="474">

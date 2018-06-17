@@ -9,17 +9,23 @@
        Title="order_list">
 
     <Grid Background="AliceBlue">
-        <Label x:Name="label1" Content="Tytuł" HorizontalAlignment="Left" Margin="30,106,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
-        <Label x:Name="label2" Content="ID Książki" HorizontalAlignment="Left" Margin="30,163,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
-        <Label x:Name="label3" Content="Imię" HorizontalAlignment="Left" Margin="30,211,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
-        <Label x:Name="label4" Content="Nazwisko" HorizontalAlignment="Left" Margin="30,270,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
-        <Label x:Name="label5" Content="ID Ucznia" HorizontalAlignment="Left" Margin="30,324,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
-        <TextBox x:Name="tytuly_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" BorderBrush="Black" FontSize="16"/>
-        <TextBox x:Name="data_wypozyczenia_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" BorderBrush="Black" FontSize="16" Background="{x:Null}"/>
-        <TextBox x:Name="imie_ucznia_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" BorderBrush="Black" FontSize="16"/>
-        <TextBox x:Name="nazwisko_ucznia_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" Background="{x:Null}" BorderBrush="#FF070707" FontSize="16"/>
-        <TextBox x:Name="id_ucznia_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,310,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" BorderBrush="#FF070707" FontSize="16"/>
-        <Button x:Name="add_btn" Content="DODAJ" HorizontalAlignment="Left" Margin="154,403,0,0" VerticalAlignment="Top" Width="176" Click="add_btn_Click" BorderBrush="Black" Background="#FF005DFF" Height="43"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="388,32,0,0" VerticalAlignment="Top" Height="389" Width="667"/>
+        <Button x:Name="load_table_txt" Content="Załaduj tabelę" HorizontalAlignment="Center" Margin="571,427,197,10" VerticalAlignment="Center" Width="312" Click="load_table_txt_Click" Background="#FF005DFF" Height="37" BorderBrush="Black"/>
+        <Label x:Name="label1" Content="Tytuł" HorizontalAlignment="Left" Margin="30,52,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
+        <Label x:Name="label2" Content="ID Książki" HorizontalAlignment="Left" Margin="30,97,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
+        <Label x:Name="label3" Content="Imię" HorizontalAlignment="Left" Margin="30,145,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
+        <Label x:Name="label4" Content="Nazwisko" HorizontalAlignment="Left" Margin="30,190,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
+        <Label x:Name="label5" Content="ID Ucznia" HorizontalAlignment="Left" Margin="30,230,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="218" FontSize="16" FontWeight="SemiBold"/>
+        <TextBox x:Name="tytuly_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" BorderBrush="Black" FontSize="16"/>
+        <TextBox x:Name="id_ksiazki_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" BorderBrush="Black" FontSize="16"/>
+        <TextBox x:Name="imie_ucznia_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" BorderBrush="Black" FontSize="16"/>
+        <TextBox x:Name="nazwisko_ucznia_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" Background="{x:Null}" BorderBrush="#FF070707" FontSize="16"/>
+        <TextBox x:Name="id_ucznia_txtbx" HorizontalAlignment="Left" Height="40" Margin="140,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" BorderBrush="#FF070707" FontSize="16"/>
+        <Button x:Name="add_btn" Content="DODAJ" HorizontalAlignment="Left" Margin="140,275,0,0" VerticalAlignment="Top" Width="144" Click="add_btn_Click" BorderBrush="Black" Background="#FF005DFF" Height="42"/>
+        <Button x:Name="del_btn" Content="USUŃ" HorizontalAlignment="Left" Margin="140,400,0,0" VerticalAlignment="Top" Width="144" Click="del_btn_Click" BorderBrush="Black" Background="#FF005DFF" Height="42"/>
+        <TextBox x:Name="id_wypozyczenia_txtbx" HorizontalAlignment="Left" Height="38" Margin="318,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" BorderBrush="Black" FontSize="16" Background="{x:Null}" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="label3_Copy" Content="ID wypożyczenia które chcesz usunąć:" HorizontalAlignment="Left" Margin="30,355,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="330" FontSize="16" FontWeight="SemiBold"/>
+
 
 
     </Grid>

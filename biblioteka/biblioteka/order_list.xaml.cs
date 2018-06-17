@@ -38,14 +38,14 @@ namespace biblioteka
             {
 
                 sqliteCon.Open();
-                string Query = "select IDWypozyczenia, Tytuły, Data_wypozyczenia, Imie, Nazwisko, IDUcznia from Wypozyczenia  ";
+                string Query = "select IDWypozyczenia, Tytuły, date(Data_wypozyczenia), Imie, Nazwisko, IDUcznia from Wypozyczenia  ";
                 SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
                 createCommand.ExecuteNonQuery();
 
                 SQLiteDataAdapter dataAdp = new SQLiteDataAdapter(createCommand);
                 DataTable dt = new DataTable("Wypozyczenia");
                 dataAdp.Fill(dt);
-                //dataGrid.ItemsSource = dt.DefaultView;
+                dataGrid.ItemsSource = dt.DefaultView;
                 dataAdp.Update(dt);
 
 
@@ -69,12 +69,14 @@ namespace biblioteka
             lastrowid.ExecuteNonQuery();
             int newId = Convert.ToInt32(lastrowid.ExecuteScalar());
             newId = newId + 1;
+            String data = DateTime.Now.ToString("yyyy.MM.dd");
+            string datex = DateTime.Now.ToString("yyyy-MM-dd");
             sqliteCon.Close();
             MessageBox.Show(newId.ToString());
             try
             {
                 sqliteCon.Open();
-                string Query = "insert into Wypozyczenia (IDWypozyczenia, Tytuły, Data_wypozyczenia, Imie, Nazwisko, IDUcznia) values('" + newId + "', '" + this.tytuly_txtbx.Text + "', '" + this.data_wypozyczenia_txtbx.Text + "', '" + this.imie_ucznia_txtbx.Text + "', '" + this.nazwisko_ucznia_txtbx.Text + "', '" + this.id_ucznia_txtbx.Text + "')";
+                string Query = "insert into Wypozyczenia (IDWypozyczenia, Tytuły, Data_wypozyczenia, Imie, Nazwisko, IDUcznia) values('" + newId + "',  '" + this.tytuly_txtbx.Text + "', '" + datex + "' , '" +this.imie_ucznia_txtbx.Text + "', '" + this.nazwisko_ucznia_txtbx.Text + "', '" + this.id_ucznia_txtbx.Text + "')";
                 SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
                 createCommand.ExecuteNonQuery();
                 MessageBox.Show("Zapiano");
@@ -87,7 +89,28 @@ namespace biblioteka
             }
         }
 
-        
+        private void del_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SQLiteConnection sqliteCon = new SQLiteConnection(dbConnectionString);
+            //Otwarcie połączenia z bazą
+            try
+            {
+                sqliteCon.Open();
+                
+                string Query = "delete from Wypozyczenia where IDWypozyczenia='" + this.id_wypozyczenia_txtbx.Text + "'";
+                SQLiteCommand createCommand = new SQLiteCommand(Query, sqliteCon);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Usunieto");
+                sqliteCon.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
     }
 }
 
