@@ -11,18 +11,19 @@
     <Grid Background="AliceBlue">
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="373,60,0,0" VerticalAlignment="Top" Height="389" Width="667"/>
         <Button x:Name="load_table_txt" Content="Załaduj tabelę" HorizontalAlignment="Center" Margin="546,10,222,427" VerticalAlignment="Center" Width="312" Click="load_table_txt_Click" Background="#FF005DFF" Height="37" BorderBrush="Black"/>
-        <Label x:Name="label" Content="IdKsiążki" HorizontalAlignment="Left" Margin="38,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.842,-2.923" Background="{x:Null}" Foreground="#DD000000"/>
-        <Label x:Name="label1" Content="Tytuł" HorizontalAlignment="Left" Margin="38,153,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
-        <Label x:Name="label2" Content="Autor" HorizontalAlignment="Left" Margin="38,195,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
-        <Label x:Name="label3" Content="Rok wydania" HorizontalAlignment="Left" Margin="38,241,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
-        <Label x:Name="label4" Content="Wydawnictwo" HorizontalAlignment="Left" Margin="38,288,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
-        <Label x:Name="label5" Content="Filia" HorizontalAlignment="Left" Margin="38,332,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
-        <TextBox x:Name="ksiazki_id_txtbx" HorizontalAlignment="Left" Height="24" Margin="162,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="Black"/>
-        <TextBox x:Name="tytul_txtbx" HorizontalAlignment="Left" Height="24" Margin="162,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="Black"/>
-        <TextBox x:Name="autor_txtbx" HorizontalAlignment="Left" Height="26" Margin="162,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="Black"/>
-        <TextBox x:Name="rok_wydania_txtbx" HorizontalAlignment="Left" Height="26" Margin="162,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="Black"/>
-        <TextBox x:Name="wydawnictwo_txtbx" HorizontalAlignment="Left" Height="26" Margin="162,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="#FF070707"/>
-        <TextBox x:Name="fillia_txtbx" HorizontalAlignment="Left" Height="26" Margin="162,332,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="#FF070707"/>
+        <Label x:Name="label" Content="IdKsiążki" HorizontalAlignment="Left" Margin="65,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.842,-2.923" Background="{x:Null}" Foreground="#DD000000"/>
+        <Label x:Name="label1" Content="Tytuł" HorizontalAlignment="Left" Margin="65,148,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
+        <Label x:Name="label2" Content="Autor" HorizontalAlignment="Left" Margin="65,195,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
+        <Label x:Name="label3" Content="Rok wydania" HorizontalAlignment="Left" Margin="64,240,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
+        <Label x:Name="label4" Content="Wydawnictwo" HorizontalAlignment="Left" Margin="64,285,0,0" VerticalAlignment="Top" Foreground="#DD000000"/>
+        <Label x:Name="label5" Content="Filia" HorizontalAlignment="Left" Margin="65,330,0,0" VerticalAlignment="Top" Foreground="#DD000000" RenderTransformOrigin="1.075,0.436"/>
+        <TextBox x:Name="ksiazki_id_txtbx" HorizontalAlignment="Left" Height="40" Margin="162,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="Black" FontSize="16"/>
+        
+        <TextBox x:Name="tytul_txtbx" HorizontalAlignment="Left" Height="40" Margin="162,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="Black" FontSize="16"/>
+        <TextBox x:Name="autor_txtbx" HorizontalAlignment="Left" Height="40" Margin="162,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="Black" FontSize="16"/>
+        <TextBox x:Name="rok_wydania_txtbx" HorizontalAlignment="Left" Height="40" Margin="162,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="Black" FontSize="16"/>
+        <TextBox x:Name="wydawnictwo_txtbx" HorizontalAlignment="Left" Height="40" Margin="162,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="#FF070707" FontSize="16"/>
+        <TextBox x:Name="fillia_txtbx" HorizontalAlignment="Left" Height="40" Margin="162,316,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" BorderBrush="#FF070707" FontSize="16"/>
         <Button x:Name="add_btn" Content="DODAJ" HorizontalAlignment="Left" Margin="33,386,0,0" VerticalAlignment="Top" Width="80" Click="add_btn_Click" BorderBrush="Black" Background="#FF005DFF"/>
         <Button x:Name="delete_btn" Content="USUŃ" HorizontalAlignment="Left" Margin="233,386,0,0" VerticalAlignment="Top" Width="80" Click="delete_btn_Click" Background="#FF005DFF" BorderBrush="Black"/>
         <Button x:Name="update_btn" Content="AKTUALIZUJ" HorizontalAlignment="Left" Margin="118,386,0,0" VerticalAlignment="Top" Width="110" Click="update_btn_Click" Background="#FF005DFF" BorderBrush="Black"/>

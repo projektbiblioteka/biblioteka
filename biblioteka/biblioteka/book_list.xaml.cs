@@ -78,7 +78,7 @@ namespace biblioteka
             }
         }
 
-        private void delete_btn_Click(object sender, RoutedEventArgs e)
+        public void delete_btn_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqliteCon = new SQLiteConnection(dbConnectionString);
             //Otwarcie połączenia z bazą
