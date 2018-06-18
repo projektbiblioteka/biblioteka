@@ -124,6 +124,7 @@
     <Compile Include="Contact.xaml.cs">
       <DependentUpon>Contact.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dodawaniewypozyczenia.cs" />
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
@@ -158,6 +159,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Baza\Ksiazki.db" />
+    <None Include="Ksiazki.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -27,6 +27,11 @@ namespace biblioteka
             InitializeComponent();
         }
 
+        public string getactualdate() {
+            string actualdate = DateTime.Now.ToString("yyyy-MM-dd");
+            return actualdate;
+        }
+
         string dbConnectionString = @"Data Source=..\..\Baza\Ksiazki.db;Version=3;";
 
         private void load_table_txt_Click(object sender, RoutedEventArgs e)
