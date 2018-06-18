@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 namespace biblioteka
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Klasa obsługująca logikę wisoku MainMenu
     /// </summary>
     public partial class MainMenu : Window
     {
@@ -23,46 +23,70 @@ namespace biblioteka
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            int index = int.Parse(((Button)e.Source).Uid);
-
-
-        }
+                
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
         }
 
+
+        /// <summary>
+        /// Metoda obsługująca zdarzenie po naciśnięciu na przycisk książki
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnClickP1(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
            
+            ///Otwarcie nowej strony book_list
             Main.Content = new book_list();
 
         }
 
+
+
+        /// <summary>
+        /// Metoda obsługująca zdarzenie po naciśnięciu na przycisk wypożyczalnia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnClickP2(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
 
+            ///Otwarcie nowej strony order_list
             Main.Content = new order_list();
 
         }
 
+
+        /// <summary>
+        /// Metoda obsługująca zdarzenie po naciśnięciu na przycisk zaległości
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnClickP3(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
 
+            ///Otwarcie nowej strony arrears
             Main.Content = new arrears();
 
         }
 
+
+        /// <summary>
+        /// Metoda obsługująca zdarzenie po naciśnięciu na przycisk oddziały
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnClickP4(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
 
+            ///Otwarcie nowej strony contact
             Main.Content = new contact();
 
         }
