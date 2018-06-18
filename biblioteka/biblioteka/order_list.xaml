@@ -24,7 +24,7 @@
         <Button x:Name="add_btn" Content="DODAJ" HorizontalAlignment="Left" Margin="140,275,0,0" VerticalAlignment="Top" Width="144" Click="add_btn_Click" BorderBrush="Black" Background="#FF005DFF" Height="42"/>
         <Button x:Name="del_btn" Content="USUŃ" HorizontalAlignment="Left" Margin="140,400,0,0" VerticalAlignment="Top" Width="144" Click="del_btn_Click" BorderBrush="Black" Background="#FF005DFF" Height="42"/>
         <TextBox x:Name="id_wypozyczenia_txtbx" HorizontalAlignment="Left" Height="38" Margin="318,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" BorderBrush="Black" FontSize="16" Background="{x:Null}" RenderTransformOrigin="0.5,0.5"/>
-        <Label x:Name="label3_Copy" Content="ID wypożyczenia które chcesz usunąć:" HorizontalAlignment="Left" Margin="30,355,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="330" FontSize="16" FontWeight="SemiBold"/>
+        <Label x:Name="label3_Copy" Content="ID wypożyczenia które chcesz usunąć:" HorizontalAlignment="Left" Margin="30,355,0,0" VerticalAlignment="Top" Foreground="#DD000000" Height="40" Width="288" FontSize="16" FontWeight="SemiBold"/>
 
 
 
