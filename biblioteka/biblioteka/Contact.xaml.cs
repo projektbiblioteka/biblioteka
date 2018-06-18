@@ -19,10 +19,11 @@ using System.Data;
 namespace biblioteka
 {
     /// <summary>
-    /// Interaction logic for book_list.xaml
+    /// Klasa odpowiedzialna za wyświetlenie widoku Contact
     /// </summary>
     public partial class contact : Page
     {
+        
         public contact()
         {
             InitializeComponent();
