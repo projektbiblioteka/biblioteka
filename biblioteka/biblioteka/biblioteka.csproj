@@ -159,6 +159,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Baza\Ksiazki.db" />
+    <None Include="dokumentacjaDoxygen\dokumentacja doxygen.zip" />
     <None Include="Ksiazki.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
