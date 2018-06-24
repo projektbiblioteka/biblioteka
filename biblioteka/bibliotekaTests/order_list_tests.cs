@@ -26,8 +26,8 @@ namespace bibliotekaTests
         [TestMethod]
         public void testowanie()
         {
-            ///Spodziewana wartość to 15
-            int expected = 15;
+            ///Spodziewana wartość to 16
+            int expected = 16;
 
             ///Przypisanie do zmiennej actual, wyniku otrzymanego w rezultacie działania metody
             int actual = biblioteka.Dodawaniewypozyczenia.loadlastrownumber();
